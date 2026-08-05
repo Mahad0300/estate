@@ -702,28 +702,12 @@ p.small {
 }
 
 /* Precise Heights for Staggered Alignment */
-.masonry-h-340 {
-  height: 340px;
+.masonry-h-380 {
+  height: 380px;
 }
 
 .masonry-h-280 {
   height: 280px;
-}
-
-.masonry-h-250 {
-  height: 250px;
-}
-
-.masonry-h-370 {
-  height: 370px;
-}
-
-.masonry-h-330 {
-  height: 330px;
-}
-
-.masonry-h-290 {
-  height: 290px;
 }
 
 .masonry-img {
@@ -772,12 +756,8 @@ p.small {
     flex-direction: column;
   }
 
-  .masonry-h-340,
-  .masonry-h-280,
-  .masonry-h-250,
-  .masonry-h-370,
-  .masonry-h-330,
-  .masonry-h-290 {
+  .masonry-h-380,
+  .masonry-h-280 {
     height: 300px;
   }
 }

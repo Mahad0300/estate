@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Estate1 - Premium Builders & Developers. Discover luxury off-plan properties, apartments, villas, and prime real estate investments.">
   <title>Estate1 | Luxury Real Estate & Builders</title>
+  <link rel="icon" href="image/logo.webp" type="image/webp">
   
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -41,9 +42,8 @@
           <!-- Navigation Links -->
           <div class="nav-links-wrapper">
             <a href="#home" class="nav-link active">Home</a>
-            <a href="#projects" class="nav-link">Projects</a>
-            <a href="#off-plan" class="nav-link">Off-Plan</a>
-            <a href="#communities" class="nav-link">Communities</a>
+            <a href="#projects" class="nav-link">Project</a>
+            <a href="#team" class="nav-link">Team</a>
             <a href="#about" class="nav-link">About Us</a>
             <a href="#contact" class="nav-link">Contact</a>
           </div>
@@ -100,14 +100,14 @@
         <div class="section-header text-left d-flex justify-between align-start flex-wrap gap-3" style="margin-bottom: 3rem;">
           <div style="max-width: 720px;">
             <span class="featured-section-label">Latest</span>
-            <h2 class="featured-section-title">ARCHITECTURAL LAUNCH</h2>
+            <h2 class="featured-section-title">MORDERN RESIDENCY</h2>
             <p class="featured-section-desc">
-              Experience luxury living redefined with Greenz by Danube — featuring premium interior finishes, panoramic sky lounge views, and world-class resort amenities crafted for modern urban living.
+              Experience luxury living, featuring premium interior finishes, panoramic sky lounge views, and world-class resort amenities crafted for modern urban living.
             </p>
           </div>
           <div>
             <a href="#contact" class="btn btn-outline-accent">
-              Explore Master Plan <i class="fa-solid fa-arrow-right"></i>
+              Download The Brochure <i class="fa-solid fa-arrow-right"></i>
             </a>
           </div>
         </div>
@@ -115,56 +115,38 @@
         <!-- Balanced Masonry Grid Gallery -->
         <div class="masonry-grid-wrapper">
           
-          <!-- Column 1 (Total Height: 620px) -->
+          <!-- Column 1 -->
           <div class="masonry-col">
-            <div class="masonry-item masonry-h-340">
-              <img src="image/livingroom.jpg" alt="Greenz Luxury Living Interior" class="masonry-img">
+            <div class="masonry-item masonry-h-380">
+              <img src="image/livingroom.jpg" alt="Luxury Living Interior" class="masonry-img">
               <div class="masonry-overlay">
                 <h4>Luxury Living Interiors</h4>
-                <p>Greenz By Danube</p>
+                <p>Modern Residency</p>
               </div>
             </div>
             <div class="masonry-item masonry-h-280">
               <img src="image/balconyview.jpg" alt="Balcony Panoramic View" class="masonry-img">
               <div class="masonry-overlay">
                 <h4>Panoramic Balcony & Views</h4>
-                <p>Greenz By Danube</p>
+                <p>Modern Residency</p>
               </div>
             </div>
           </div>
 
-          <!-- Column 2 (Total Height: 620px) -->
+          <!-- Column 2 -->
           <div class="masonry-col">
-            <div class="masonry-item masonry-h-250">
+            <div class="masonry-item masonry-h-280">
               <img src="image/rooftopview.jpg" alt="Rooftop Infinity Pool" class="masonry-img">
               <div class="masonry-overlay">
                 <h4>Rooftop Infinity Pool & Lounge</h4>
-                <p>Greenz By Danube</p>
+                <p>Modern Residency</p>
               </div>
             </div>
-            <div class="masonry-item masonry-h-370">
+            <div class="masonry-item masonry-h-380">
               <img src="image/modernbanner.jpg" alt="Iconic Building Facade" class="masonry-img">
               <div class="masonry-overlay">
                 <h4>Iconic Building Facade</h4>
-                <p>Greenz By Danube</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Column 3 (Total Height: 620px) -->
-          <div class="masonry-col">
-            <div class="masonry-item masonry-h-330">
-              <img src="image/cityviewprojectbanner.jpg" alt="Skyline Architecture" class="masonry-img">
-              <div class="masonry-overlay">
-                <h4>Modern Architectural Skyline</h4>
-                <p>Greenz By Danube</p>
-              </div>
-            </div>
-            <div class="masonry-item masonry-h-290">
-              <img src="image/citycomfortprojectbanner.jpg" alt="World-Class Amenities" class="masonry-img">
-              <div class="masonry-overlay">
-                <h4>World-Class Amenities</h4>
-                <p>Greenz By Danube</p>
+                <p>Modern Residency</p>
               </div>
             </div>
           </div>
@@ -210,7 +192,6 @@
     <section class="investment-benefits-section" aria-labelledby="investmentBenefitsTitle">
       <div class="container">
         <div class="benefits-heading">
-          <span class="featured-section-label">The Estate1 Advantage</span>
           <h2 id="investmentBenefitsTitle" class="featured-section-title">WHY INVEST WITH US</h2>
           <p class="featured-section-desc">
             A trusted property partner and one of the world's most rewarding real estate destinations.
@@ -632,33 +613,6 @@
     </div>
   </footer>
 
-  <!-- Script for Mobile Menu Drawer -->
-  <script>
-    const mobileToggle = document.getElementById('mobileToggle');
-    const mobileClose = document.getElementById('mobileClose');
-    const navMenu = document.getElementById('navMenu');
-    const navOverlay = document.getElementById('navOverlay');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    function openMenu() {
-      navMenu.classList.add('active');
-      navOverlay.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeMenu() {
-      navMenu.classList.remove('active');
-      navOverlay.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-
-    if (mobileToggle) mobileToggle.addEventListener('click', openMenu);
-    if (mobileClose) mobileClose.addEventListener('click', closeMenu);
-    if (navOverlay) navOverlay.addEventListener('click', closeMenu);
-
-    navLinks.forEach(link => {
-      link.addEventListener('click', closeMenu);
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
