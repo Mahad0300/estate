@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Estate1 - Premium Builders & Developers. Discover luxury off-plan properties, apartments, villas, and prime real estate investments.">
+  <title>Estate1 | Luxury Real Estate & Builders</title>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Global Design System -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Backdrop Overlay -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ==========================================
+       SITE HEADER / NAVIGATION BAR
+       ========================================== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <!-- Logo -->
+        <a href="index.html" class="logo-link">
+          <img src="image/logo.webp" alt="Estate1 Logo" class="logo-img">
+        </a>
+
+        <!-- Off-Canvas Left Drawer & Desktop Navigation -->
+        <nav class="nav-menu" id="navMenu">
+          <!-- Mobile Drawer Top Header (Logo + Close Cross) -->
+          <div class="mobile-drawer-header">
+            <img src="image/logo.webp" alt="Estate1 Logo" class="logo-img">
+            <button class="mobile-close" id="mobileClose" aria-label="Close Menu">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <!-- Navigation Links -->
+          <div class="nav-links-wrapper">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#off-plan" class="nav-link">Off-Plan</a>
+            <a href="#communities" class="nav-link">Communities</a>
+            <a href="#about" class="nav-link">About Us</a>
+            <a href="#contact" class="nav-link">Contact</a>
+          </div>
+
+          <!-- Mobile Drawer Action Buttons (WhatsApp & Contact Us inside Mobile Navbar) -->
+          <div class="mobile-drawer-actions">
+            <a href="https://wa.me/923000000000" target="_blank" class="btn btn-whatsapp btn-sm">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="#contact" class="btn btn-primary btn-sm">
+              <i class="fa-solid fa-paper-plane"></i> Contact Us
+            </a>
+          </div>
+        </nav>
+
+        <!-- Top Right Header Actions (Desktop Only) -->
+        <div class="header-actions">
+          <a href="https://wa.me/923000000000" target="_blank" class="btn btn-whatsapp btn-sm desktop-btn">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+          </a>
+          <a href="#contact" class="btn btn-primary btn-sm desktop-btn">
+            <i class="fa-solid fa-paper-plane"></i> Contact Us
+          </a>
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       MAIN CONTENT CONTAINER
+       ========================================== -->
+  <main id="main-content">
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <span class="badge-tag">Luxury Real Estate & Developments</span>
+          <h1 class="hero-title">Redefining Modern Luxury Living & Investment</h1>
+          <p class="hero-description">
+            Discover exclusive premium residences, off-plan developments, and world-class architectural designs crafted by Estate1.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest Launch Masonry Gallery Section -->
+    <section id="latest-launch" class="latest-launch-section">
+      <div class="container">
+        <!-- Section Header (Left Aligned & Premium Layout) -->
+        <div class="section-header text-left d-flex justify-between align-start flex-wrap gap-3" style="margin-bottom: 3rem;">
+          <div style="max-width: 720px;">
+            <span class="featured-section-label">Latest</span>
+            <h2 class="featured-section-title">ARCHITECTURAL LAUNCH</h2>
+            <p class="featured-section-desc">
+              Experience luxury living redefined with Greenz by Danube — featuring premium interior finishes, panoramic sky lounge views, and world-class resort amenities crafted for modern urban living.
+            </p>
+          </div>
+          <div>
+            <a href="#contact" class="btn btn-outline-accent">
+              Explore Master Plan <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Balanced Masonry Grid Gallery -->
+        <div class="masonry-grid-wrapper">
+          
+          <!-- Column 1 (Total Height: 620px) -->
+          <div class="masonry-col">
+            <div class="masonry-item masonry-h-340">
+              <img src="image/livingroom.jpg" alt="Greenz Luxury Living Interior" class="masonry-img">
+              <div class="masonry-overlay">
+                <h4>Luxury Living Interiors</h4>
+                <p>Greenz By Danube</p>
+              </div>
+            </div>
+            <div class="masonry-item masonry-h-280">
+              <img src="image/balconyview.jpg" alt="Balcony Panoramic View" class="masonry-img">
+              <div class="masonry-overlay">
+                <h4>Panoramic Balcony & Views</h4>
+                <p>Greenz By Danube</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2 (Total Height: 620px) -->
+          <div class="masonry-col">
+            <div class="masonry-item masonry-h-250">
+              <img src="image/rooftopview.jpg" alt="Rooftop Infinity Pool" class="masonry-img">
+              <div class="masonry-overlay">
+                <h4>Rooftop Infinity Pool & Lounge</h4>
+                <p>Greenz By Danube</p>
+              </div>
+            </div>
+            <div class="masonry-item masonry-h-370">
+              <img src="image/modernbanner.jpg" alt="Iconic Building Facade" class="masonry-img">
+              <div class="masonry-overlay">
+                <h4>Iconic Building Facade</h4>
+                <p>Greenz By Danube</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 3 (Total Height: 620px) -->
+          <div class="masonry-col">
+            <div class="masonry-item masonry-h-330">
+              <img src="image/cityviewprojectbanner.jpg" alt="Skyline Architecture" class="masonry-img">
+              <div class="masonry-overlay">
+                <h4>Modern Architectural Skyline</h4>
+                <p>Greenz By Danube</p>
+              </div>
+            </div>
+            <div class="masonry-item masonry-h-290">
+              <img src="image/citycomfortprojectbanner.jpg" alt="World-Class Amenities" class="masonry-img">
+              <div class="masonry-overlay">
+                <h4>World-Class Amenities</h4>
+                <p>Greenz By Danube</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Full-Width Sticky Image Scroll Section -->
+    <section id="projects" class="sticky-image-section" aria-label="Estate1 development highlights">
+      <div class="sticky-section-header">
+        <div class="container">
+          <span class="featured-section-label">Featured</span>
+          <h2 class="featured-section-title">PROJECTS</h2>
+          <p class="featured-section-desc">
+            Discover signature developments shaped by bold architecture, refined interiors, and destinations built for lasting value.
+          </p>
+        </div>
+      </div>
+
+      <div class="sticky-image-stack">
+        <article class="sticky-image-slide">
+          <div class="sticky-image-media">
+            <img src="image/allprojectcombine.jpg" alt="Estate1 luxury property developments">
+          </div>
+        </article>
+
+        <article class="sticky-image-slide">
+          <div class="sticky-image-media">
+            <img src="image/livingroom.jpg" alt="Premium modern living room interior">
+          </div>
+        </article>
+
+        <article class="sticky-image-slide">
+          <div class="sticky-image-media">
+            <img src="image/rooftopview.jpg" alt="Luxury rooftop pool overlooking the city">
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Why Estate1 & Why Invest in Dubai -->
+    <section class="investment-benefits-section" aria-labelledby="investmentBenefitsTitle">
+      <div class="container">
+        <div class="benefits-heading">
+          <span class="featured-section-label">The Estate1 Advantage</span>
+          <h2 id="investmentBenefitsTitle" class="featured-section-title">WHY INVEST WITH US</h2>
+          <p class="featured-section-desc">
+            A trusted property partner and one of the world's most rewarding real estate destinations.
+          </p>
+        </div>
+
+        <div class="benefits-columns">
+          <div class="benefits-column">
+            <div class="benefits-column-heading">
+              <span>Why</span>
+              <h3>ESTATE1?</h3>
+            </div>
+
+            <div class="benefits-grid">
+              <div class="benefit-item">
+                <img src="image/interest.png" alt="" class="benefit-icon">
+                <h4>Flexible Payment Plans</h4>
+              </div>
+              <div class="benefit-item">
+                <img src="image/interest.png" alt="" class="benefit-icon">
+                <h4>Prime Locations</h4>
+              </div>
+              <div class="benefit-item">
+                <img src="image/interest.png" alt="" class="benefit-icon">
+                <h4>Timely Handover</h4>
+              </div>
+              <div class="benefit-item">
+                <img src="image/interest.png" alt="" class="benefit-icon">
+                <h4>Premium Quality</h4>
+              </div>
+              <div class="benefit-item">
+                <img src="image/interest.png" alt="" class="benefit-icon">
+                <h4>Curated Portfolio</h4>
+              </div>
+              <div class="benefit-item">
+                <img src="image/interest.png" alt="" class="benefit-icon">
+                <h4>Expert Advisory</h4>
+              </div>
+              <div class="benefit-item">
+                <img src="image/interest.png" alt="" class="benefit-icon">
+                <h4>Transparent Process</h4>
+              </div>
+              <div class="benefit-item">
+                <img src="image/interest.png" alt="" class="benefit-icon">
+                <h4>After-Sales Support</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="benefits-column">
+            <div class="benefits-column-heading">
+              <span>Why</span>
+              <h3>INVEST IN DUBAI?</h3>
+            </div>
+
+            <div class="benefits-grid">
+              <div class="benefit-item">
+                <img src="image/interest.png" alt="" class="benefit-icon">
+                <h4>One of the Safest Cities</h4>
+              </div>
+              <div class="benefit-item">
+                <img src="image/interest.png" alt="" class="benefit-icon">
+                <h4>High Rental Returns</h4>
+              </div>
+              <div class="benefit-item">
+                <img src="image/interest.png" alt="" class="benefit-icon">
+                <h4>Capital Appreciation</h4>
+              </div>
+              <div class="benefit-item">
+                <img src="image/interest.png" alt="" class="benefit-icon">
+                <h4>Golden Visa Opportunity</h4>
+              </div>
+              <div class="benefit-item">
+                <img src="image/interest.png" alt="" class="benefit-icon">
+                <h4>Freehold Ownership</h4>
+              </div>
+              <div class="benefit-item">
+                <img src="image/interest.png" alt="" class="benefit-icon">
+                <h4>Tax-Friendly Income</h4>
+              </div>
+              <div class="benefit-item">
+                <img src="image/interest.png" alt="" class="benefit-icon">
+                <h4>World-Class Infrastructure</h4>
+              </div>
+              <div class="benefit-item">
+                <img src="image/interest.png" alt="" class="benefit-icon">
+                <h4>Global Connectivity</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest Real Estate Insights -->
+    <section class="blog-section" aria-labelledby="blogSectionTitle">
+      <div class="container">
+        <div class="blog-section-header">
+          <div>
+            <span class="featured-section-label">Latest Insights</span>
+            <h2 id="blogSectionTitle" class="featured-section-title">BLOG &amp; NEWS</h2>
+            <p class="featured-section-desc">
+              Explore market updates, investment guidance, and the latest trends shaping Dubai real estate.
+            </p>
+          </div>
+          <a href="#" class="btn btn-outline-accent">
+            View All Articles <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="blog-grid">
+          <article class="blog-card">
+            <a href="#" class="blog-card-image" aria-label="Read Dubai property investment guide">
+              <img src="image/cityviewprojectbanner.jpg" alt="Modern Dubai skyline and residential towers" loading="lazy">
+              <span class="blog-category">Investment</span>
+            </a>
+            <div class="blog-card-content">
+              <div class="blog-meta">
+                <span><i class="fa-regular fa-calendar"></i> 05 Aug 2026</span>
+                <span><i class="fa-regular fa-clock"></i> 5 min read</span>
+              </div>
+              <h3><a href="#">Why Dubai Remains a Top Destination for Property Investors</a></h3>
+              <p>Discover the key factors driving strong demand, attractive returns, and long-term growth across Dubai.</p>
+              <a href="#" class="blog-read-more">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <a href="#" class="blog-card-image" aria-label="Read off-plan property guide">
+              <img src="image/modernbanner.jpg" alt="Contemporary luxury property development" loading="lazy">
+              <span class="blog-category">Off-Plan Guide</span>
+            </a>
+            <div class="blog-card-content">
+              <div class="blog-meta">
+                <span><i class="fa-regular fa-calendar"></i> 29 Jul 2026</span>
+                <span><i class="fa-regular fa-clock"></i> 4 min read</span>
+              </div>
+              <h3><a href="#">What to Know Before Buying an Off-Plan Property</a></h3>
+              <p>A practical guide to payment plans, developer selection, location research, and expected returns.</p>
+              <a href="#" class="blog-read-more">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <a href="#" class="blog-card-image" aria-label="Read luxury lifestyle trends">
+              <img src="image/livingroom.jpg" alt="Luxury modern living room interior" loading="lazy">
+              <span class="blog-category">Lifestyle</span>
+            </a>
+            <div class="blog-card-content">
+              <div class="blog-meta">
+                <span><i class="fa-regular fa-calendar"></i> 18 Jul 2026</span>
+                <span><i class="fa-regular fa-clock"></i> 6 min read</span>
+              </div>
+              <h3><a href="#">The Design Trends Defining Modern Luxury Homes</a></h3>
+              <p>From intelligent spaces to refined materials, see what is shaping the next generation of luxury living.</p>
+              <a href="#" class="blog-read-more">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Frequently Asked Questions -->
+    <section class="faq-section" aria-labelledby="faqSectionTitle">
+      <div class="container">
+        <div class="faq-layout">
+          <div class="faq-intro">
+            <span class="featured-section-label">Need to Know</span>
+            <h2 id="faqSectionTitle" class="featured-section-title">FREQUENTLY ASKED QUESTIONS</h2>
+            <p class="featured-section-desc">
+              Clear answers to common questions about buying, investing, and owning property in Dubai.
+            </p>
+            <a href="#contact" class="faq-contact-link">
+              Still have a question? Talk to our team
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="faq-list">
+            <details class="faq-item" open>
+              <summary>Can foreigners buy property in Dubai?</summary>
+              <div class="faq-answer">
+                <p>Yes. Foreign nationals can purchase freehold property in designated areas across Dubai with full ownership rights.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>What is an off-plan property?</summary>
+              <div class="faq-answer">
+                <p>An off-plan property is purchased before construction is completed, often with flexible payment plans and attractive launch pricing.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>What additional costs should a buyer expect?</summary>
+              <div class="faq-answer">
+                <p>Typical costs may include the Dubai Land Department fee, registration charges, agency fees, and applicable mortgage expenses.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Can a property investment qualify me for a UAE residency visa?</summary>
+              <div class="faq-answer">
+                <p>Eligible property investments can qualify for residency options, subject to the current investment threshold and government requirements.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>How does Estate1 support me during the buying process?</summary>
+              <div class="faq-answer">
+                <p>Our team assists with project selection, market comparisons, documentation, negotiations, and after-sales support through every stage.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Property Inquiry -->
+    <section id="contact" class="contact-section" aria-labelledby="contactSectionTitle">
+      <div class="contact-blueprint" aria-hidden="true"></div>
+      <div class="container">
+        <div class="contact-layout">
+          <div class="contact-form-card">
+            <form class="contact-form" action="#" method="post">
+              <div class="contact-form-row">
+                <div class="contact-field">
+                  <label for="firstName">First Name</label>
+                  <input type="text" id="firstName" name="firstName" placeholder="First Name*" autocomplete="given-name" required>
+                </div>
+                <div class="contact-field">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" id="lastName" name="lastName" placeholder="Last Name*" autocomplete="family-name" required>
+                </div>
+              </div>
+
+              <div class="contact-field">
+                <label for="phoneNumber">Phone Number</label>
+                <div class="phone-field">
+                  <select name="countryCode" aria-label="Country code">
+                    <option value="+971">🇦🇪 +971</option>
+                    <option value="+92">🇵🇰 +92</option>
+                    <option value="+91">🇮🇳 +91</option>
+                    <option value="+44">🇬🇧 +44</option>
+                    <option value="+1">🇺🇸 +1</option>
+                  </select>
+                  <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone Number*" autocomplete="tel" required>
+                </div>
+              </div>
+
+              <div class="contact-field">
+                <label for="emailAddress">Email Address</label>
+                <input type="email" id="emailAddress" name="emailAddress" placeholder="Email*" autocomplete="email" required>
+              </div>
+
+              <div class="contact-field">
+                <label for="budget">Budget</label>
+                <select id="budget" name="budget" required>
+                  <option value="" selected disabled>Select a Budget*</option>
+                  <option value="under-1m">Under AED 1 Million</option>
+                  <option value="1m-2m">AED 1–2 Million</option>
+                  <option value="2m-5m">AED 2–5 Million</option>
+                  <option value="above-5m">Above AED 5 Million</option>
+                </select>
+              </div>
+
+              <div class="contact-field">
+                <label for="unitType">Unit Type</label>
+                <select id="unitType" name="unitType" required>
+                  <option value="" selected disabled>Select Unit Type*</option>
+                  <option value="studio">Studio</option>
+                  <option value="apartment">Apartment</option>
+                  <option value="townhouse">Townhouse</option>
+                  <option value="villa">Villa</option>
+                  <option value="penthouse">Penthouse</option>
+                </select>
+              </div>
+
+              <div class="contact-field">
+                <label for="purchaseTimeline">Purchase Timeline</label>
+                <select id="purchaseTimeline" name="purchaseTimeline" required>
+                  <option value="" selected disabled>Purchase Timeline*</option>
+                  <option value="immediately">Immediately</option>
+                  <option value="1-3-months">Within 1–3 Months</option>
+                  <option value="3-6-months">Within 3–6 Months</option>
+                  <option value="exploring">Just Exploring</option>
+                </select>
+              </div>
+
+              <div class="contact-field">
+                <label for="nationality">Nationality</label>
+                <select id="nationality" name="nationality" required>
+                  <option value="" selected disabled>Select Nationality*</option>
+                  <option value="uae">United Arab Emirates</option>
+                  <option value="pakistan">Pakistan</option>
+                  <option value="india">India</option>
+                  <option value="uk">United Kingdom</option>
+                  <option value="usa">United States</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-outline-accent contact-submit">
+                Request a Consultation <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </form>
+          </div>
+
+          <div class="contact-content">
+            <span class="contact-label">Private Consultation</span>
+            <h2 id="contactSectionTitle">LET'S FIND YOUR NEXT PROPERTY</h2>
+            <p>
+              Share your requirements and our property advisors will prepare a focused selection based on your goals, timeline, and budget.
+            </p>
+
+            <div class="contact-points">
+              <div class="contact-point">
+                <i class="fa-solid fa-check"></i>
+                <span>Personalized property recommendations</span>
+              </div>
+              <div class="contact-point">
+                <i class="fa-solid fa-check"></i>
+                <span>Clear payment plan comparisons</span>
+              </div>
+              <div class="contact-point">
+                <i class="fa-solid fa-check"></i>
+                <span>Dedicated support from inquiry to handover</span>
+              </div>
+            </div>
+
+            <p class="contact-response-note">
+              <i class="fa-regular fa-clock"></i>
+              An advisor will contact you within one business day.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       SITE FOOTER
+       ========================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-cta">
+        <div>
+          <span>Start Your Property Journey</span>
+          <h2>LET'S FIND A PLACE THAT MOVES YOU.</h2>
+        </div>
+        <a href="#contact" class="btn btn-outline-accent">
+          Speak With an Advisor <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo-link" aria-label="Estate1 home">
+            <img src="image/logo.webp" alt="Estate1 Logo" class="footer-logo">
+          </a>
+          <p>
+            Curating exceptional properties and investment opportunities across Dubai's most sought-after communities.
+          </p>
+          <div class="footer-socials" aria-label="Social media links">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Featured Projects</a></li>
+            <li><a href="#latest-launch">Latest Launch</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Properties</h3>
+          <ul>
+            <li><a href="#projects">Off-Plan</a></li>
+            <li><a href="#projects">Apartments</a></li>
+            <li><a href="#projects">Villas</a></li>
+            <li><a href="#projects">Luxury Penthouses</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column footer-contact">
+          <h3>Visit &amp; Connect</h3>
+          <ul>
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Dubai Luxury Towers,<br>United Arab Emirates</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+97140000000">+971 4 000 0000</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:info@estate1.com">info@estate1.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Estate1.com. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script for Mobile Menu Drawer -->
+  <script>
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileClose = document.getElementById('mobileClose');
+    const navMenu = document.getElementById('navMenu');
+    const navOverlay = document.getElementById('navOverlay');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    function openMenu() {
+      navMenu.classList.add('active');
+      navOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      navMenu.classList.remove('active');
+      navOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    if (mobileToggle) mobileToggle.addEventListener('click', openMenu);
+    if (mobileClose) mobileClose.addEventListener('click', closeMenu);
+    if (navOverlay) navOverlay.addEventListener('click', closeMenu);
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+  </script>
+</body>
+</html>
