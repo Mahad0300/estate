@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Estate1 - Premium Builders & Developers. Discover luxury off-plan properties, apartments, villas, and prime real estate investments.">
+  <title>Estate1 | Luxury Real Estate & Builders</title>
+  <link rel="icon" href="image/logo.webp" type="image/webp">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Global Design System -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Backdrop Overlay -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ==========================================
+       SITE HEADER / NAVIGATION BAR
+       ========================================== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <!-- Logo -->
+        <a href="index.html" class="logo-link">
+          <img src="image/logo.webp" alt="Estate1 Logo" class="logo-img">
+        </a>
+
+        <!-- Off-Canvas Left Drawer & Desktop Navigation -->
+        <nav class="nav-menu" id="navMenu">
+          <!-- Mobile Drawer Top Header (Logo + Close Cross) -->
+          <div class="mobile-drawer-header">
+            <img src="image/logo.webp" alt="Estate1 Logo" class="logo-img">
+            <button class="mobile-close" id="mobileClose" aria-label="Close Menu">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <!-- Navigation Links -->
+          <div class="nav-links-wrapper">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#projects" class="nav-link">Project</a>
+            <a href="#team" class="nav-link">Team</a>
+            <a href="#about" class="nav-link">About Us</a>
+            <a href="#contact" class="nav-link">Contact</a>
+          </div>
+
+          <!-- Mobile Drawer Action Buttons (WhatsApp & Contact Us inside Mobile Navbar) -->
+          <div class="mobile-drawer-actions">
+            <a href="https://wa.me/923000000000" target="_blank" class="btn btn-whatsapp btn-sm">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="#contact" class="btn btn-primary btn-sm">
+              <i class="fa-solid fa-paper-plane"></i> Contact Us
+            </a>
+          </div>
+        </nav>
+
+        <!-- Top Right Header Actions (Desktop Only) -->
+        <div class="header-actions">
+          <a href="https://wa.me/923000000000" target="_blank" class="btn btn-whatsapp btn-sm desktop-btn">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+          </a>
+          <a href="#contact" class="btn btn-primary btn-sm desktop-btn">
+            <i class="fa-solid fa-paper-plane"></i> Contact Us
+          </a>
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="about-hero" aria-labelledby="aboutHeroTitle">
+      <div class="container">
+        <div class="about-hero-layout">
+          <div class="about-hero-copy">
+            <span class="about-hero-eyebrow">Established in Dubai</span>
+            <h1 id="aboutHeroTitle" class="about-hero-title">
+              <span>ABOUT</span>
+              <span>US</span>
+            </h1>
+            <p>
+              We are a trusted real estate team committed to helping you buy, sell, and invest with clarity and confidence.
+            </p>
+            <div class="about-hero-line" aria-hidden="true"></div>
+          </div>
+
+          <figure class="about-hero-visual">
+            <img src="image/modernbanner.jpg" alt="Estate1 modern residential development">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="story" class="our-story-section" aria-labelledby="ourStoryTitle">
+      <div class="container">
+        <div class="our-story-heading">
+          <span>What Defines Us</span>
+          <h2 id="ourStoryTitle">BUILT WITH CLARITY.<br>DRIVEN BY PURPOSE.</h2>
+        </div>
+
+        <div class="story-dual-grid">
+          <article class="story-panel">
+            <span class="story-panel-number">01</span>
+            <div class="story-panel-content">
+              <span class="story-panel-label">Our Story</span>
+              <h3>A clearer way to navigate real estate.</h3>
+              <p>
+                Estate1 began with a simple observation: buyers were not short of property options—they were short of clear, honest guidance.
+              </p>
+              <p>
+                We built our practice around listening first, understanding the purpose behind every purchase, and presenting opportunities that genuinely fit.
+              </p>
+            </div>
+          </article>
+
+          <article class="story-panel">
+            <span class="story-panel-number">02</span>
+            <div class="story-panel-content">
+              <span class="story-panel-label">Our Vision</span>
+              <h3>To set a better standard for property advisory.</h3>
+              <p>
+                Our vision is to become Dubai's most trusted real estate partner by making every property decision clearer, more personal, and built around lasting value.
+              </p>
+              <p>
+                We want every client to move forward with confidence—not pressure—and remain supported long after the keys are handed over.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       SITE FOOTER
+       ========================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo-link" aria-label="Estate1 home">
+            <img src="image/logo.webp" alt="Estate1 Logo" class="footer-logo">
+          </a>
+          <p>
+            Curating exceptional properties and investment opportunities across Dubai's most sought-after communities.
+          </p>
+          <div class="footer-socials" aria-label="Social media links">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Featured Projects</a></li>
+            <li><a href="#latest-launch">Latest Launch</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Properties</h3>
+          <ul>
+            <li><a href="#projects">Off-Plan</a></li>
+            <li><a href="#projects">Apartments</a></li>
+            <li><a href="#projects">Villas</a></li>
+            <li><a href="#projects">Luxury Penthouses</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column footer-contact">
+          <h3>Visit &amp; Connect</h3>
+          <ul>
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Dubai Luxury Towers,<br>United Arab Emirates</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+97140000000">+971 4 000 0000</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:info@estate1.com">info@estate1.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Estate1.com. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
