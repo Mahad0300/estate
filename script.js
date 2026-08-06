@@ -83,3 +83,32 @@ if (milestoneNumbers.length) {
     }
   }
 }
+
+/* ------------------------------------------
+   TEAM MEMBER PHOTO FALLBACK
+   ------------------------------------------ */
+document.querySelectorAll('.team-member-photo img, .leadership-photo img').forEach((img) => {
+  const hideBrokenPhoto = () => img.classList.add('is-hidden');
+
+  if (img.complete && img.naturalWidth === 0) {
+    hideBrokenPhoto();
+    return;
+  }
+
+  img.addEventListener('error', hideBrokenPhoto);
+});
+
+/* ------------------------------------------
+   FAQ — ONLY ONE OPEN AT A TIME
+   ------------------------------------------ */
+const faqItems = document.querySelectorAll('.faq-list .faq-item');
+
+faqItems.forEach((item) => {
+  item.addEventListener('toggle', () => {
+    if (!item.open) return;
+
+    faqItems.forEach((other) => {
+      if (other !== item) other.open = false;
+    });
+  });
+});

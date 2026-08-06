@@ -927,19 +927,21 @@ p.small {
 .benefits-column-heading h3 {
   margin-bottom: 0;
   color: var(--primary);
-  font-size: clamp(1.5rem, 2.4vw, 2.15rem);
+  font-size: clamp(1.25rem, 2.1vw, 1.85rem);
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
+  line-height: 1.25;
 }
 
-.benefits-grid {
+.investment-benefits-section .benefits-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(2, auto);
   border-top: 1px dashed #B8C5CF;
   border-left: 1px dashed #B8C5CF;
 }
 
-.benefit-item {
+.investment-benefits-section .benefit-item {
   min-height: 150px;
   display: flex;
   flex-direction: column;
@@ -961,7 +963,7 @@ p.small {
 }
 
 .benefit-item h4 {
-  max-width: 120px;
+  max-width: 140px;
   margin-bottom: 0;
   color: var(--text-main);
   font-size: 0.76rem;
@@ -1007,11 +1009,12 @@ p.small {
     margin-bottom: 2.75rem;
   }
 
-  .benefits-grid {
+  .investment-benefits-section .benefits-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
   }
 
-  .benefit-item {
+  .investment-benefits-section .benefit-item {
     min-height: 135px;
   }
 }
@@ -1355,7 +1358,7 @@ p.small {
 }
 
 .faq-item[open] summary::after {
-  content: 'âˆ’';
+  content: '-';
   color: var(--text-white);
   background-color: var(--accent);
   border-color: var(--accent);
@@ -3021,5 +3024,433 @@ p.small {
   .app-store-btn {
     width: 100%;
     justify-content: center;
+  }
+}
+
+/* ------------------------------------------
+   TEAM PAGE — LEADERSHIP LETTERS & MEMBERS
+   ------------------------------------------ */
+.letter-section {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(5rem, 9vw, 8rem) 0;
+}
+
+.letter-section--light {
+  background-color: #F7F8F8;
+}
+
+.letter-section--white {
+  background-color: var(--bg-surface);
+}
+
+.letter-section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.letter-panel {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(260px, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: end;
+}
+
+.letter-panel--flip {
+  grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
+}
+
+.letter-panel--flip .letter-panel-media {
+  order: 2;
+}
+
+.letter-panel--flip .letter-panel-copy {
+  order: 1;
+}
+
+.letter-panel-media {
+  position: relative;
+  max-width: 380px;
+}
+
+.letter-panel-index {
+  position: absolute;
+  top: -0.55em;
+  left: -0.15em;
+  z-index: 2;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(0, 174, 239, 0.75);
+  font-family: var(--font-heading);
+  font-size: clamp(4.5rem, 8vw, 7rem);
+  font-weight: 700;
+  letter-spacing: -0.08em;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.letter-portrait {
+  position: relative;
+  margin: 0;
+}
+
+.leadership-photo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 1.35rem 1.35rem 0.35rem 1.35rem;
+  background: linear-gradient(160deg, #0a4a68 0%, #032435 100%);
+  box-shadow: 18px 18px 0 rgba(6, 57, 82, 0.08);
+}
+
+.letter-panel--flip .leadership-photo {
+  border-radius: 1.35rem 1.35rem 1.35rem 0.35rem;
+  box-shadow: -18px 18px 0 rgba(6, 57, 82, 0.08);
+}
+
+.leadership-photo[data-initials]::before {
+  content: attr(data-initials);
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: grid;
+  place-items: center;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+.leadership-photo img {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+  display: block;
+  transition: transform 0.7s ease;
+}
+
+.letter-portrait:hover .leadership-photo img {
+  transform: scale(1.04);
+}
+
+.leadership-photo img.is-hidden {
+  display: none;
+}
+
+.letter-portrait figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.55rem 1rem;
+  margin-top: 1.15rem;
+  padding-top: 0.9rem;
+  border-top: 2px solid var(--accent);
+}
+
+.letter-portrait figcaption strong {
+  color: var(--primary);
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.letter-portrait figcaption span {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.letter-panel-copy {
+  position: relative;
+  padding: clamp(1rem, 2vw, 1.5rem) 0;
+}
+
+.letter-panel--flip .letter-panel-copy {
+  text-align: right;
+}
+
+.letter-panel-label {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.letter-panel-copy h2 {
+  max-width: 16ch;
+  margin-bottom: 1.4rem;
+  color: var(--primary);
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.12;
+}
+
+.letter-panel--flip .letter-panel-copy h2 {
+  margin-left: auto;
+}
+
+.letter-panel-copy blockquote {
+  position: relative;
+  max-width: 560px;
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.9;
+  quotes: none;
+}
+
+.letter-panel--flip .letter-panel-copy blockquote {
+  margin-left: auto;
+}
+
+.letter-panel-copy blockquote + blockquote {
+  margin-top: 1.1rem;
+}
+
+.letter-panel-copy blockquote::before {
+  content: '“';
+  position: absolute;
+  top: -0.55em;
+  left: -0.35em;
+  color: rgba(0, 174, 239, 0.22);
+  font-family: var(--font-heading);
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.letter-panel--flip .letter-panel-copy blockquote::before {
+  left: auto;
+  right: -0.15em;
+  content: '”';
+}
+
+.team-members-section {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(5rem, 9vw, 8rem) 0;
+  background-color: #F7F8F8;
+}
+
+.team-members-section::before {
+  content: 'TEAM';
+  position: absolute;
+  top: -0.1em;
+  left: 50%;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(6, 57, 82, 0.07);
+  font-family: var(--font-heading);
+  font-size: clamp(8rem, 22vw, 18rem);
+  font-weight: 800;
+  letter-spacing: -0.07em;
+  line-height: 1;
+  transform: translateX(-50%);
+  pointer-events: none;
+  user-select: none;
+}
+
+.team-members-heading {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto clamp(3rem, 6vw, 4.5rem);
+  text-align: center;
+}
+
+.team-members-heading > span {
+  display: inline-block;
+  margin-bottom: 0.85rem;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.team-members-heading h2 {
+  margin: 0;
+  color: var(--primary);
+  font-size: clamp(2.4rem, 5.5vw, 4.25rem);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+}
+
+.team-members-rail {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 380px));
+  justify-content: center;
+  gap: clamp(1.75rem, 4vw, 2.75rem);
+}
+
+.team-person {
+  margin: 0;
+  width: 100%;
+}
+
+.team-person figure {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 1.5rem 1.5rem 0.4rem 1.5rem;
+  background-color: #0b3042;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.team-person:hover figure {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
+}
+
+.team-person-index {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 3;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.75);
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 4vw, 3.25rem);
+  font-weight: 700;
+  letter-spacing: -0.06em;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.team-person-photo {
+  position: relative;
+  overflow: hidden;
+}
+
+.team-person-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+  linear-gradient(180deg, rgba(3, 36, 53, 0.08) 0%, transparent 35%, rgb(26 26 26) 100%);
+  pointer-events: none;
+}
+
+.team-person img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.7s ease;
+}
+
+.team-person:hover img {
+  transform: scale(1.06);
+}
+
+.team-person figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: 1.5rem 1.4rem 1.45rem;
+}
+
+.team-person figcaption::before {
+  content: '';
+  display: block;
+  width: 42px;
+  height: 2px;
+  margin-bottom: 0.85rem;
+  background-color: var(--accent);
+}
+
+.team-person h3 {
+  margin: 0 0 0.35rem;
+  color: var(--text-white);
+  font-size: clamp(1.35rem, 2.2vw, 1.7rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.team-person p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .letter-panel,
+  .letter-panel--flip {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: start;
+  }
+
+  .letter-panel--flip .letter-panel-media,
+  .letter-panel--flip .letter-panel-copy {
+    order: initial;
+  }
+
+  .letter-panel-media {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .letter-panel-copy,
+  .letter-panel--flip .letter-panel-copy {
+    padding: 1.25rem 0 0;
+    text-align: left;
+  }
+
+  .letter-panel--flip .letter-panel-copy h2,
+  .letter-panel--flip .letter-panel-copy blockquote {
+    margin-left: 0;
+  }
+
+  .letter-panel--flip .letter-panel-copy blockquote::before {
+    left: -0.35em;
+    right: auto;
+    content: '“';
+  }
+
+  .letter-panel--flip .leadership-photo {
+    border-radius: 1.35rem 1.35rem 0.35rem 1.35rem;
+    box-shadow: 18px 18px 0 rgba(6, 57, 82, 0.08);
+  }
+}
+
+@media (max-width: 640px) {
+  .team-members-rail {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .leadership-photo,
+  .letter-panel--flip .leadership-photo {
+    box-shadow: 12px 12px 0 rgba(6, 57, 82, 0.08);
   }
 }
