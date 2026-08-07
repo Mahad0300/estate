@@ -112,3 +112,54 @@ faqItems.forEach((item) => {
     });
   });
 });
+
+/* ------------------------------------------
+   TEXT REVEAL (no library)
+   ------------------------------------------ */
+(function initTextReveal() {
+  const reveals = document.querySelectorAll('.reveal');
+  if (!reveals.length) return;
+
+  document.documentElement.classList.add('js-reveal');
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) {
+    reveals.forEach((el) => el.classList.add('is-visible'));
+    return;
+  }
+
+  const groups = document.querySelectorAll('.reveal-group');
+
+  groups.forEach((group) => {
+    group.querySelectorAll('.reveal').forEach((el, index) => {
+      el.style.setProperty('--reveal-delay', `${index * 110}ms`);
+    });
+  });
+
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        const target = entry.target;
+
+        if (target.classList.contains('reveal-group')) {
+          target.querySelectorAll('.reveal').forEach((el) => el.classList.add('is-visible'));
+        } else {
+          target.classList.add('is-visible');
+        }
+
+        observer.unobserve(target);
+      });
+    },
+    { threshold: 0.12, rootMargin: '0px 0px -8% 0px' }
+  );
+
+  groups.forEach((group) => revealObserver.observe(group));
+
+  reveals.forEach((el) => {
+    if (!el.closest('.reveal-group')) {
+      revealObserver.observe(el);
+    }
+  });
+})();
