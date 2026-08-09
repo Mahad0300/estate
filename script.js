@@ -163,3 +163,31 @@ faqItems.forEach((item) => {
     }
   });
 })();
+
+/* ------------------------------------------
+   STRICT 11-DIGIT PAKISTAN PHONE NUMBER INPUT RESTRICTION
+   ------------------------------------------ */
+document.querySelectorAll('input[type="tel"]').forEach((input) => {
+  input.setAttribute('inputmode', 'numeric');
+  input.setAttribute('maxlength', '11');
+  input.setAttribute('pattern', '[0-9]{11}');
+
+  input.addEventListener('input', (e) => {
+    e.target.value = e.target.value.replace(/[^0-9]/g, '').slice(0, 11);
+  });
+});
+
+/* ------------------------------------------
+   FORM SELECT OPTION COLOR TOGGLE
+   ------------------------------------------ */
+document.querySelectorAll('.contact-field select').forEach((select) => {
+  const updateColor = () => {
+    if (select.value && select.value !== '') {
+      select.classList.add('has-value');
+    } else {
+      select.classList.remove('has-value');
+    }
+  };
+  updateColor();
+  select.addEventListener('change', updateColor);
+});

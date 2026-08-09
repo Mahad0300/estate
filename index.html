@@ -413,16 +413,10 @@
               </div>
 
               <div class="contact-field">
-                <label for="phoneNumber">Phone Number</label>
+                <label for="phoneNumber">Phone Number (11 Digits)</label>
                 <div class="phone-field">
-                  <select name="countryCode" aria-label="Country code">
-                    <option value="+971">🇦🇪 +971</option>
-                    <option value="+92">🇵🇰 +92</option>
-                    <option value="+91">🇮🇳 +91</option>
-                    <option value="+44">🇬🇧 +44</option>
-                    <option value="+1">🇺🇸 +1</option>
-                  </select>
-                  <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone Number*" autocomplete="tel" required>
+                  <div class="country-badge">🇵🇰 +92</div>
+                  <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="03XX-XXXXXXX" autocomplete="tel" inputmode="numeric" maxlength="11" pattern="[0-9]{11}" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 11)" required>
                 </div>
               </div>
 
@@ -435,10 +429,11 @@
                 <label for="budget">Budget</label>
                 <select id="budget" name="budget" required>
                   <option value="" selected disabled>Select a Budget*</option>
-                  <option value="under-1m">Under AED 1 Million</option>
-                  <option value="1m-2m">AED 1–2 Million</option>
-                  <option value="2m-5m">AED 2–5 Million</option>
-                  <option value="above-5m">Above AED 5 Million</option>
+                  <option value="under-10m">Under PKR 1 Crore</option>
+                  <option value="10m-30m">PKR 1–3 Crore</option>
+                  <option value="30m-50m">PKR 3–5 Crore</option>
+                  <option value="50m-100m">PKR 5–10 Crore</option>
+                  <option value="above-100m">Above PKR 10 Crore</option>
                 </select>
               </div>
 
@@ -446,11 +441,10 @@
                 <label for="unitType">Unit Type</label>
                 <select id="unitType" name="unitType" required>
                   <option value="" selected disabled>Select Unit Type*</option>
-                  <option value="studio">Studio</option>
-                  <option value="apartment">Apartment</option>
-                  <option value="townhouse">Townhouse</option>
-                  <option value="villa">Villa</option>
-                  <option value="penthouse">Penthouse</option>
+                  <option value="apartment">Apartment / Flat</option>
+                  <option value="portion">Portion / House</option>
+                  <option value="commercial">Commercial Shop / Office</option>
+                  <option value="penthouse">Luxury Penthouse</option>
                 </select>
               </div>
 
@@ -466,15 +460,12 @@
               </div>
 
               <div class="contact-field">
-                <label for="nationality">Nationality</label>
-                <select id="nationality" name="nationality" required>
-                  <option value="" selected disabled>Select Nationality*</option>
-                  <option value="uae">United Arab Emirates</option>
-                  <option value="pakistan">Pakistan</option>
-                  <option value="india">India</option>
-                  <option value="uk">United Kingdom</option>
-                  <option value="usa">United States</option>
-                  <option value="other">Other</option>
+                <label for="buyerType">Buyer Status</label>
+                <select id="buyerType" name="buyerType" required>
+                  <option value="" selected disabled>Select Buyer Status*</option>
+                  <option value="resident">Resident Pakistani</option>
+                  <option value="nrp">Overseas Pakistani (NRP / RDA)</option>
+                  <option value="investor">Corporate / Commercial Investor</option>
                 </select>
               </div>
 

@@ -1163,7 +1163,7 @@ p.small {
   z-index: 2;
   align-self: end;
   padding: 8rem 2rem 2rem;
-  background: linear-gradient(to top, rgba(3, 24, 36, 0.96) 0%, rgba(3, 24, 36, 0.66) 52%, transparent 100%);
+  background: linear-gradient(to top, rgb(16 16 16 / 96%) 0%, rgb(0 0 0 / 66%) 52%, #00000000 100%);
 }
 
 .blog-card:first-child .blog-category {
@@ -1523,7 +1523,7 @@ p.small {
   width: 100%;
   min-height: 58px;
   padding: 0.9rem 1rem;
-  color: var(--text-main);
+  color: var(--text-dark);
   background-color: #fff;
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
@@ -1535,24 +1535,61 @@ p.small {
 }
 
 .contact-field select {
-  color: var(--text-muted);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 2.75rem;
+  color: #94A3B8;
   cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23063952' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1.25rem center;
+  background-size: 16px 16px;
+}
+
+.contact-field select:valid,
+.contact-field select.has-value {
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.contact-field select option {
+  color: var(--text-dark);
+  background-color: #ffffff;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+}
+
+.contact-field select option[disabled] {
+  color: #94A3B8;
 }
 
 .contact-field input:focus,
 .contact-field select:focus {
   border-color: var(--accent);
   box-shadow: 0 0 0 3px var(--accent-glow);
+  outline: none;
 }
 
 .phone-field {
   display: grid;
-  grid-template-columns: 125px minmax(0, 1fr);
+  grid-template-columns: 110px minmax(0, 1fr);
 }
 
-.phone-field select {
-  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+.phone-field select,
+.phone-field .country-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0 0.75rem;
   background-color: var(--bg-light);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  user-select: none;
 }
 
 .phone-field input {
@@ -1561,6 +1598,7 @@ p.small {
 }
 
 .phone-field:focus-within select,
+.phone-field:focus-within .country-badge,
 .phone-field:focus-within input {
   border-color: var(--accent);
 }
