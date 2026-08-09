@@ -3967,8 +3967,6 @@ p.small {
 .blog-hero-image-wrap img {
   width: 100%;
   height: auto;
-  max-height: 540px;
-  object-fit: cover;
   display: block;
   transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
